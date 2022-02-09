@@ -7,7 +7,7 @@ function FeedbackList({ feedback, handleDelete }) {
     return <p>No feedback yet</p>;
   }
 
-  return (
+  return (  //Animacija
     <div className="feedback-list">
       <AnimatePresence>
         {feedback.map((item) => (
@@ -28,7 +28,8 @@ function FeedbackList({ feedback, handleDelete }) {
     </div>
   );
 
-  /*return (
+  /*  Bez animacije
+  return (
     <div className="feedback-list">
       {feedback.map((item) => (
         <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
