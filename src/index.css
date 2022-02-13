@@ -186,8 +186,8 @@ input:focus {
 }
 
 .about-link {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 10px;
   right: 20px;
   color: #fff;
   cursor: pointer;
@@ -224,5 +224,21 @@ input:focus {
 
   .input-group input {
     width: 80%;
+  }
+  .about-link{
+    position: inherit;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width:1000px){
+  .about-link{
+    position: inherit;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
