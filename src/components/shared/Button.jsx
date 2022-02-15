@@ -1,23 +1,22 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-export default function Button({children, version, type, isDisabled}) {
+export default function Button({ children, version, type, isDisabled }) {
   return (
-        <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
-            {children}
-        </button>
+    <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
+      {children}
+    </button>
   );
 }
 
 Button.protoTypes = {
-    children: PropTypes.node.isRequired,
-    version: PropTypes.string,
-    type: PropTypes.string,
-    isDisabled: PropTypes.bool
-}
+  children: PropTypes.node.isRequired,
+  version: PropTypes.string,
+  type: PropTypes.string,
+  isDisabled: PropTypes.bool,
+};
 
-
-Button.defaultProps= {
-    version:'primary',
-    type:'button',
-    isDisabled: false,
-}
+Button.defaultProps = {
+  version: "primary",
+  type: "button",
+  isDisabled: false,
+};

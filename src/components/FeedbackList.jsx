@@ -4,13 +4,14 @@ import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackList() {
-  const{feedback} =useContext(FeedbackContext)
+  const { feedback } = useContext(FeedbackContext);
 
   if (!feedback || feedback.length === 0) {
     return <p>No feedback yet</p>;
   }
 
-  return (  //Animacija
+  return (
+    //Animation
     <div className="feedback-list">
       <AnimatePresence>
         {feedback.map((item) => (
@@ -20,17 +21,12 @@ function FeedbackList() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <FeedbackItem
-              key={item.id}
-              item={item}
-              
-            />
+            <FeedbackItem key={item.id} item={item} />
           </motion.div>
         ))}
       </AnimatePresence>
     </div>
   );
-
 }
 
 export default FeedbackList;
